@@ -1,4 +1,4 @@
-let btn = document.querySelector("#btn")
+/*let btn = document.querySelector("#btn")
 let out = document.querySelector("#out")
 
 btn.addEventListener('click', function(){
@@ -31,13 +31,40 @@ console.log(str1.substring(0,6))
 console.log(str1.substr(3,5))
 
 
+//Concatenation
+console.log(str1 +' '+ str2)
+console.log(str1.concat(' ', str3,' ',str2))
+*/
+
 const text = document.querySelector('#text')
 const find = document.querySelector('#find')
 const replace = document.querySelector('#replace')
 const btnFR = document.querySelector('#btnFR')
 const outFR = document.querySelector('#outFR')
 
+// Change first text
 btnFR.addEventListener('click',function(){
-    console.log(text.value)
+    let output = text.value
+    output = output.replace(find.value, replace.value)
+    outFR.innerText = output
 })
 
+// Change all text
+/*btnFR.addEventListener('click',function(){
+    let output = text.value
+    output = output.replaceAll(find.value, replace.value)
+    outFR.innerText = output
+})
+*/
+
+// Change all text, Text tranform and Trim
+btnFR.addEventListener('click',function(){
+    let findText = find.value
+    findText = findText.trim();
+
+    let output = text.value
+
+    output = output.replaceAll(findText, replace.value.trim())
+    outFR.innerText = output
+    //console.log(output.toUpperCase())
+})
