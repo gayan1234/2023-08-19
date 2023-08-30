@@ -56,6 +56,5 @@ do {
     if(k==3) {
         continue
     }
-    
     console.log(k)
 }while(k<10)
