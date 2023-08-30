@@ -23,3 +23,39 @@ btn.addEventListener('click', function() {
         result.innerHTML = "F"
     }
 })
+
+const day = document.getElementById('day')
+const qBtn = document.getElementById('qBtn')
+const qResult = document.getElementById('qResult')
+
+qBtn.addEventListener('click', function() {
+    switch (day.value) {
+        case 'Monday':
+            qResult.innerHTML = "Get Ready To Work"
+            break;
+        case 'Wednesday':
+            qResult.innerHTML = "Get Ready To Work"
+            break;
+        case 'Saturday':
+            qResult.innerHTML = "Enjoy Your Weekend"
+            break;
+        default:
+            qResult.innerHTML = "Enjoy Your Day"
+            break;
+    }
+})
+
+let a = true
+let b = false
+
+if(a) {
+    console.log("a is True")
+}
+
+if(a && b) {
+    console.log("a and b is True")
+}
+
+if(a || b) {
+    console.log('a or b is True')
+}
